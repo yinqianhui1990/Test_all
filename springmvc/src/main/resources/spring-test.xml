@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+            http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+            ">
+<aop:aspectj-autoproxy />
+    <!-- // 首先开启代理 aop-->
+    <bean id = "demo" class = "com.test.aop.Demo" ></bean>   <!--// 实例化两个类-->
+    <bean id = "myAop" class = "com.test.aop.MyAop" ></bean>  <!--// 实例化两个类-->
+    <aop:config>                         <!--    // 对 aop 的注册-->
+        <aop:aspect id = "asp" ref = "myAop">   <!--// 写一个切面， ref 关联的是代理类-->
+            <aop:pointcut expression = "execution(* com.test.aop.Demo.*(..))" id = "mycut" />
+           <!-- // 拦截是的要代理的目的对象 ， com 前面的 * 是代表要拦截所有 com 。 FISH 包下的类，第二个 * 表示 demo 里面的所有方法 ,() 里面是方法的参数。-->
+            <aop:before method = "myMthod1" pointcut-ref = "mycut" />
+           <!-- // 然后在 before 代表在切入点之前执行代理函数 mymthod1 方法的内容。-->
+            <aop:after method="myMthod2" pointcut-ref="mycut" />
+           <!-- // 有前就有后，所以在地理目标对象的后面。切入。然后还有很多状态。-->
+        </aop:aspect >
+    </aop:config >
+</beans>

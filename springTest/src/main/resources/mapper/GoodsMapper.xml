@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yqh.miaosha.dao.GoodsMapper" >
+  <resultMap id="BaseResultMap" type="com.yqh.miaosha.model.Goods" >
+    <id column="seq_id" property="seqId" jdbcType="INTEGER" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    seq_id, code, name, amount
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from goods
+    where seq_id = #{seqId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from goods
+    where seq_id = #{seqId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.yqh.miaosha.model.Goods" >
+    insert into goods (seq_id, code, name, 
+      amount)
+    values (#{seqId,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{amount,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.yqh.miaosha.model.Goods" >
+    insert into goods
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="seqId != null" >
+        seq_id,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="amount != null" >
+        amount,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="seqId != null" >
+        #{seqId,jdbcType=INTEGER},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="amount != null" >
+        #{amount,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yqh.miaosha.model.Goods" >
+    update goods
+    <set >
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="amount != null" >
+        amount = #{amount,jdbcType=INTEGER},
+      </if>
+    </set>
+    where seq_id = #{seqId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yqh.miaosha.model.Goods" >
+    update goods
+    set code = #{code,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      amount = #{amount,jdbcType=INTEGER}
+    where seq_id = #{seqId,jdbcType=INTEGER}
+  </update>
+
+  <update id="updateGoodAmount" parameterType="com.yqh.miaosha.model.Goods" >
+    update goods
+    set
+    amount =amount- #{amount}
+    where code = #{code} and amount- #{amount}>=0
+  </update>
+
+  <delete id="deleteByGoodCode" parameterType="java.lang.String" >
+    delete from goods
+    where code = #{code}
+  </delete>
+</mapper>

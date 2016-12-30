@@ -1,0 +1,136 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+function test(){	
+	$.get("index2.do", {
+		Action : "get"				
+	//传递的参数
+			}, function(data) {
+				// data 可以是 xmlDoc, jsonObj, html, text, 等等.				
+				alert(data.name);
+			//$("#roleName").val(member.yin);//获取map里面的数据
+			
+			//从list里面获取map,在获取map里面的数据
+		
+		}, "json");	
+	}
+	
+function getUser(){	
+	$.post("getUser.do", {
+		Action : "post"			
+	//传递的参数
+			}, function(data) {
+				// data 可以是 xmlDoc, jsonObj, html, text, 等等.	
+				console.log(data)
+				alert(data.userName);
+			//$("#roleName").val(member.yin);//获取map里面的数据			
+			//从list里面获取map,在获取map里面的数据
+		
+		}, "json");	
+	}
+function seString(){	
+	$.get("requestParam.do", {  
+		userName:'iyihyi',passWord:'123456'
+	//传递的参数
+}, function(data) {
+				// data 可以是 xmlDoc, jsonObj, html, text, 等等.	
+				console.log(data);
+		
+		}, "json");	
+	}
+
+
+function test4(){
+	jQuery.ajax( {     
+        type : 'GET',     
+        contentType : 'application/json;charset=UTF-8',     
+        url : 'requestParam.do',     
+        dataType : 'json',   
+        data:{userName:"yiner",passWord:"123456"},
+        success : function(data) {     
+         alert(data);
+        },     
+        error : function() {     
+          alert("error");     
+        }     
+      });    
+}
+
+
+
+
+function sendUser(){
+/* ///data需要JSON.stringify(),但这个设置是针对POST请求的，tomacat对GET和POST请求处理方式是不同的，要处理针对GET请求的编码问题，则需要改tomcat的server.xml配置文件，如下：
+
+<Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+改为：
+
+<Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443" useBodyEncodingForURI="true"/> */
+	//post不会乱码。。。
+	jQuery.ajax( {     
+        type : 'POST',     
+        contentType : 'application/json;charset=UTF-8',     
+        url : 'sendUser.do',     
+        dataType : 'json',   
+        data:JSON.stringify({userName:"千慧",passWord:"123456"}),
+        success : function(data) {     
+        console.log(data);
+        },     
+        error : function() {     
+          alert("error");     
+        }     
+      });    
+}
+
+function saveUser(){
+	///data需要JSON.stringify()
+	jQuery.ajax( {     
+        type : 'POST',     
+        contentType : 'application/json;charset=UTF-8',     
+        url : 'saveUser.do',     
+        dataType : 'json',   
+        data:JSON.stringify({userName:"yinermnmhjh",passWord:"123456"}),
+        success : function(data) {     
+        console.log(data);
+        },     
+        error : function() {     
+          alert("error");     
+        }     
+      });
+}
+function testxxx() {
+        jQuery.ajax({
+                type: 'POST',
+                contentType: 'application/json;charset=UTF-8',
+                url: 'sendUser.do',
+                dataType: 'json',
+                data:JSON.stringify({userName: "yqh", passWord: "999888"}),
+                success: function (data) {
+                        console.log(data);
+                },
+                error: function () {
+                        alert("error");
+                }
+        });
+}
+</script>
+</head>
+<body>
+<h2>index</h2>
+
+<button onclick="test()">test</button>
+<button onclick="getUser()">getUser</button>
+<button onclick="seString()">seString</button>
+<button onclick="test4()">test4</button>
+<button onclick="sendUser()">sendUser</button>
+<button onclick="saveUser()">saveUser</button>
+<button onclick="testxxx()">testxxx</button>
+<form action="sendUser2.do" method="post">
+        <input type="text" name="userName">
+        <input type="text" name="passWord">
+        <input type="submit" value="sub">
+</form>
+</body>
+</html>

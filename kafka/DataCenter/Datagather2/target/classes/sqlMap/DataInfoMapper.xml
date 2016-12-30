@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lachesis.mybatis.DataInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.lachesis.pojo.DataInfo" >
+    <id column="SEQ_ID" property="seqId"  />
+    <result column="MAC_ADDRESS" property="macAddress"  />
+    <result column="DATA_INFO" property="dataInfo"  />
+    <result column="DATA_TYPE" property="dataType"  />
+    <result column="CREAT_TIME" property="creatTime" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    SEQ_ID, MAC_ADDRESS, DATA_INFO, DATA_TYPE, CREAT_TIME
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from data
+    where SEQ_ID = #{seqId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from data
+    where SEQ_ID = #{seqId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.lachesis.pojo.DataInfo" >
+    insert into data (SEQ_ID, MAC_ADDRESS, DATA_INFO, 
+      DATA_TYPE, CREAT_TIME)
+    values (#{seqId,jdbcType=BIGINT}, #{macAddress,jdbcType=VARCHAR}, #{dataInfo,jdbcType=VARCHAR}, 
+      #{dataType,jdbcType=VARCHAR}, #{creatTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.lachesis.pojo.DataInfo" >
+    insert into data
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="seqId != null" >
+        SEQ_ID,
+      </if>
+      <if test="macAddress != null" >
+        MAC_ADDRESS,
+      </if>
+      <if test="dataInfo != null" >
+        DATA_INFO,
+      </if>
+      <if test="dataType != null" >
+        DATA_TYPE,
+      </if>
+      <if test="creatTime != null" >
+        CREAT_TIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="seqId != null" >
+        #{seqId},
+      </if>
+      <if test="macAddress != null" >
+        #{macAddress},
+      </if>
+      <if test="dataInfo != null" >
+        #{dataInfo},
+      </if>
+      <if test="dataType != null" >
+        #{dataType},
+      </if>
+      <if test="creatTime != null" >
+        #{creatTime},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.lachesis.pojo.DataInfo" >
+    update data
+    <set >
+      <if test="macAddress != null" >
+        MAC_ADDRESS = #{macAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="dataInfo != null" >
+        DATA_INFO = #{dataInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="dataType != null" >
+        DATA_TYPE = #{dataType,jdbcType=VARCHAR},
+      </if>
+      <if test="creatTime != null" >
+        CREAT_TIME = #{creatTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where SEQ_ID = #{seqId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.lachesis.pojo.DataInfo" >
+    update data
+    set MAC_ADDRESS = #{macAddress,jdbcType=VARCHAR},
+      DATA_INFO = #{dataInfo,jdbcType=VARCHAR},
+      DATA_TYPE = #{dataType,jdbcType=VARCHAR},
+      CREAT_TIME = #{creatTime,jdbcType=TIMESTAMP}
+    where SEQ_ID = #{seqId,jdbcType=BIGINT}
+  </update>
+
+  <resultMap id="FlyoverClientResult" type="com.lachesis.flyover.client.FlyoverClientResult" >
+   <!-- <id column="SEQ_ID" property="seqId"  />-->
+    <result column="MAC_ADDRESS" property="btAddress"  />
+    <result column="DATA_INFO" property="coreData"  />
+    <result column="DATA_TYPE" property="dataType"  />
+    <result column="CREAT_TIME" property="dateTime" />
+  </resultMap>
+
+  <insert id="insertFlyoverClientResultList" parameterType="java.util.List" >
+    insert into data(
+
+        MAC_ADDRESS,
+
+        DATA_INFO,
+
+        DATA_TYPE,
+
+        CREAT_TIME
+    )
+    VALUES
+      <foreach collection="list" item="item" index="index"
+               separator=",">
+        (
+     #{item.btAddress},
+
+     #{item.coreData},
+
+     #{item.dataType},
+
+     #{item.dateTime}
+     )
+      </foreach>
+
+  </insert>
+
+</mapper>

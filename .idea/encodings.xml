@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Test_all" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/activemq2/src/main/java/com/test/log/TestSlf4j.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/activemq2/src/main/resources/log4j.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/generator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nettyTest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springTest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc" charset="UTF-8" />
+  </component>
+</project>

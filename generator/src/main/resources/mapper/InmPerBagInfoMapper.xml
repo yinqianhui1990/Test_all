@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.InmPerBagInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.test.model.InmPerBagInfo" >
+    <id column="seq_id" property="seqId" jdbcType="BIGINT" />
+    <result column="infusion_bag_id" property="infusionBagId" jdbcType="VARCHAR" />
+    <result column="mac_address" property="macAddress" jdbcType="VARCHAR" />
+    <result column="begin_time" property="beginTime" jdbcType="TIMESTAMP" />
+    <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+    <result column="act_total_capacity" property="actTotalCapacity" jdbcType="DECIMAL" />
+    <result column="act_total_weight" property="actTotalWeight" jdbcType="DECIMAL" />
+    <result column="std_total_capacity" property="stdTotalCapacity" jdbcType="DECIMAL" />
+    <result column="std_total_weight" property="stdTotalWeight" jdbcType="DECIMAL" />
+    <result column="infusion_status" property="infusionStatus" jdbcType="CHAR" />
+    <result column="dept_code" property="deptCode" jdbcType="VARCHAR" />
+    <result column="dept_name" property="deptName" jdbcType="VARCHAR" />
+    <result column="order_no" property="orderNo" jdbcType="VARCHAR" />
+    <result column="order_count" property="orderCount" jdbcType="INTEGER" />
+    <result column="order_exec_index" property="orderExecIndex" jdbcType="INTEGER" />
+    <result column="material" property="material" jdbcType="VARCHAR" />
+    <result column="tare" property="tare" jdbcType="DECIMAL" />
+    <result column="net_weight" property="netWeight" jdbcType="DECIMAL" />
+    <result column="spec_capacity" property="specCapacity" jdbcType="DECIMAL" />
+    <result column="takeaway_time" property="takeawayTime" jdbcType="TIMESTAMP" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="bed_code" property="bedCode" jdbcType="VARCHAR" />
+    <result column="latest_sent_time" property="latestSentTime" jdbcType="TIMESTAMP" />
+    <result column="latest_drop_speed" property="latestDropSpeed" jdbcType="INTEGER" />
+    <result column="latest_rest_weight" property="latestRestWeight" jdbcType="DECIMAL" />
+    <result column="latest_rest_capacity" property="latestRestCapacity" jdbcType="DECIMAL" />
+    <result column="latest_inm_percent" property="latestInmPercent" jdbcType="INTEGER" />
+    <result column="latest_rest_time" property="latestRestTime" jdbcType="INTEGER" />
+    <result column="time_alarm_status" property="timeAlarmStatus" jdbcType="INTEGER" />
+    <result column="capacity_alarm_status" property="capacityAlarmStatus" jdbcType="INTEGER" />
+    <result column="speed_alarm_status" property="speedAlarmStatus" jdbcType="INTEGER" />
+    <result column="warning_volume" property="warningVolume" jdbcType="INTEGER" />
+    <result column="usage" property="usage" jdbcType="VARCHAR" />
+    <result column="frequency" property="frequency" jdbcType="VARCHAR" />
+    <result column="order_barcode" property="orderBarcode" jdbcType="VARCHAR" />
+    <result column="pat_id" property="patId" jdbcType="VARCHAR" />
+    <result column="pat_name" property="patName" jdbcType="VARCHAR" />
+    <result column="pat_inhosp_no" property="patInhospNo" jdbcType="VARCHAR" />
+    <result column="pat_sex" property="patSex" jdbcType="CHAR" />
+    <result column="pat_age" property="patAge" jdbcType="INTEGER" />
+    <result column="pat_barcode" property="patBarcode" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="duty_nurse_code" property="dutyNurseCode" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    seq_id, infusion_bag_id, mac_address, begin_time, end_time, act_total_capacity, act_total_weight, 
+    std_total_capacity, std_total_weight, infusion_status, dept_code, dept_name, order_no, 
+    order_count, order_exec_index, material, tare, net_weight, spec_capacity, takeaway_time, 
+    create_time, bed_code, latest_sent_time, latest_drop_speed, latest_rest_weight, latest_rest_capacity, 
+    latest_inm_percent, latest_rest_time, time_alarm_status, capacity_alarm_status, speed_alarm_status, 
+    warning_volume, usage, frequency, order_barcode, pat_id, pat_name, pat_inhosp_no, 
+    pat_sex, pat_age, pat_barcode, remark, duty_nurse_code
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from inm_perbag_info
+    where seq_id = #{seqId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from inm_perbag_info
+    where seq_id = #{seqId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.test.model.InmPerBagInfo" >
+    insert into inm_perbag_info (seq_id, infusion_bag_id, mac_address, 
+      begin_time, end_time, act_total_capacity, 
+      act_total_weight, std_total_capacity, std_total_weight, 
+      infusion_status, dept_code, dept_name, 
+      order_no, order_count, order_exec_index, 
+      material, tare, net_weight, 
+      spec_capacity, takeaway_time, create_time, 
+      bed_code, latest_sent_time, latest_drop_speed, 
+      latest_rest_weight, latest_rest_capacity, latest_inm_percent, 
+      latest_rest_time, time_alarm_status, capacity_alarm_status, 
+      speed_alarm_status, warning_volume, usage, 
+      frequency, order_barcode, pat_id, 
+      pat_name, pat_inhosp_no, pat_sex, 
+      pat_age, pat_barcode, remark, 
+      duty_nurse_code)
+    values (#{seqId,jdbcType=BIGINT}, #{infusionBagId,jdbcType=VARCHAR}, #{macAddress,jdbcType=VARCHAR}, 
+      #{beginTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, #{actTotalCapacity,jdbcType=DECIMAL}, 
+      #{actTotalWeight,jdbcType=DECIMAL}, #{stdTotalCapacity,jdbcType=DECIMAL}, #{stdTotalWeight,jdbcType=DECIMAL}, 
+      #{infusionStatus,jdbcType=CHAR}, #{deptCode,jdbcType=VARCHAR}, #{deptName,jdbcType=VARCHAR}, 
+      #{orderNo,jdbcType=VARCHAR}, #{orderCount,jdbcType=INTEGER}, #{orderExecIndex,jdbcType=INTEGER}, 
+      #{material,jdbcType=VARCHAR}, #{tare,jdbcType=DECIMAL}, #{netWeight,jdbcType=DECIMAL}, 
+      #{specCapacity,jdbcType=DECIMAL}, #{takeawayTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{bedCode,jdbcType=VARCHAR}, #{latestSentTime,jdbcType=TIMESTAMP}, #{latestDropSpeed,jdbcType=INTEGER}, 
+      #{latestRestWeight,jdbcType=DECIMAL}, #{latestRestCapacity,jdbcType=DECIMAL}, #{latestInmPercent,jdbcType=INTEGER}, 
+      #{latestRestTime,jdbcType=INTEGER}, #{timeAlarmStatus,jdbcType=INTEGER}, #{capacityAlarmStatus,jdbcType=INTEGER}, 
+      #{speedAlarmStatus,jdbcType=INTEGER}, #{warningVolume,jdbcType=INTEGER}, #{usage,jdbcType=VARCHAR}, 
+      #{frequency,jdbcType=VARCHAR}, #{orderBarcode,jdbcType=VARCHAR}, #{patId,jdbcType=VARCHAR}, 
+      #{patName,jdbcType=VARCHAR}, #{patInhospNo,jdbcType=VARCHAR}, #{patSex,jdbcType=CHAR}, 
+      #{patAge,jdbcType=INTEGER}, #{patBarcode,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{dutyNurseCode,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.test.model.InmPerBagInfo" >
+    insert into inm_perbag_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="seqId != null" >
+        seq_id,
+      </if>
+      <if test="infusionBagId != null" >
+        infusion_bag_id,
+      </if>
+      <if test="macAddress != null" >
+        mac_address,
+      </if>
+      <if test="beginTime != null" >
+        begin_time,
+      </if>
+      <if test="endTime != null" >
+        end_time,
+      </if>
+      <if test="actTotalCapacity != null" >
+        act_total_capacity,
+      </if>
+      <if test="actTotalWeight != null" >
+        act_total_weight,
+      </if>
+      <if test="stdTotalCapacity != null" >
+        std_total_capacity,
+      </if>
+      <if test="stdTotalWeight != null" >
+        std_total_weight,
+      </if>
+      <if test="infusionStatus != null" >
+        infusion_status,
+      </if>
+      <if test="deptCode != null" >
+        dept_code,
+      </if>
+      <if test="deptName != null" >
+        dept_name,
+      </if>
+      <if test="orderNo != null" >
+        order_no,
+      </if>
+      <if test="orderCount != null" >
+        order_count,
+      </if>
+      <if test="orderExecIndex != null" >
+        order_exec_index,
+      </if>
+      <if test="material != null" >
+        material,
+      </if>
+      <if test="tare != null" >
+        tare,
+      </if>
+      <if test="netWeight != null" >
+        net_weight,
+      </if>
+      <if test="specCapacity != null" >
+        spec_capacity,
+      </if>
+      <if test="takeawayTime != null" >
+        takeaway_time,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="bedCode != null" >
+        bed_code,
+      </if>
+      <if test="latestSentTime != null" >
+        latest_sent_time,
+      </if>
+      <if test="latestDropSpeed != null" >
+        latest_drop_speed,
+      </if>
+      <if test="latestRestWeight != null" >
+        latest_rest_weight,
+      </if>
+      <if test="latestRestCapacity != null" >
+        latest_rest_capacity,
+      </if>
+      <if test="latestInmPercent != null" >
+        latest_inm_percent,
+      </if>
+      <if test="latestRestTime != null" >
+        latest_rest_time,
+      </if>
+      <if test="timeAlarmStatus != null" >
+        time_alarm_status,
+      </if>
+      <if test="capacityAlarmStatus != null" >
+        capacity_alarm_status,
+      </if>
+      <if test="speedAlarmStatus != null" >
+        speed_alarm_status,
+      </if>
+      <if test="warningVolume != null" >
+        warning_volume,
+      </if>
+      <if test="usage != null" >
+        usage,
+      </if>
+      <if test="frequency != null" >
+        frequency,
+      </if>
+      <if test="orderBarcode != null" >
+        order_barcode,
+      </if>
+      <if test="patId != null" >
+        pat_id,
+      </if>
+      <if test="patName != null" >
+        pat_name,
+      </if>
+      <if test="patInhospNo != null" >
+        pat_inhosp_no,
+      </if>
+      <if test="patSex != null" >
+        pat_sex,
+      </if>
+      <if test="patAge != null" >
+        pat_age,
+      </if>
+      <if test="patBarcode != null" >
+        pat_barcode,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="dutyNurseCode != null" >
+        duty_nurse_code,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="seqId != null" >
+        #{seqId,jdbcType=BIGINT},
+      </if>
+      <if test="infusionBagId != null" >
+        #{infusionBagId,jdbcType=VARCHAR},
+      </if>
+      <if test="macAddress != null" >
+        #{macAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="beginTime != null" >
+        #{beginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null" >
+        #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="actTotalCapacity != null" >
+        #{actTotalCapacity,jdbcType=DECIMAL},
+      </if>
+      <if test="actTotalWeight != null" >
+        #{actTotalWeight,jdbcType=DECIMAL},
+      </if>
+      <if test="stdTotalCapacity != null" >
+        #{stdTotalCapacity,jdbcType=DECIMAL},
+      </if>
+      <if test="stdTotalWeight != null" >
+        #{stdTotalWeight,jdbcType=DECIMAL},
+      </if>
+      <if test="infusionStatus != null" >
+        #{infusionStatus,jdbcType=CHAR},
+      </if>
+      <if test="deptCode != null" >
+        #{deptCode,jdbcType=VARCHAR},
+      </if>
+      <if test="deptName != null" >
+        #{deptName,jdbcType=VARCHAR},
+      </if>
+      <if test="orderNo != null" >
+        #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="orderCount != null" >
+        #{orderCount,jdbcType=INTEGER},
+      </if>
+      <if test="orderExecIndex != null" >
+        #{orderExecIndex,jdbcType=INTEGER},
+      </if>
+      <if test="material != null" >
+        #{material,jdbcType=VARCHAR},
+      </if>
+      <if test="tare != null" >
+        #{tare,jdbcType=DECIMAL},
+      </if>
+      <if test="netWeight != null" >
+        #{netWeight,jdbcType=DECIMAL},
+      </if>
+      <if test="specCapacity != null" >
+        #{specCapacity,jdbcType=DECIMAL},
+      </if>
+      <if test="takeawayTime != null" >
+        #{takeawayTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="bedCode != null" >
+        #{bedCode,jdbcType=VARCHAR},
+      </if>
+      <if test="latestSentTime != null" >
+        #{latestSentTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="latestDropSpeed != null" >
+        #{latestDropSpeed,jdbcType=INTEGER},
+      </if>
+      <if test="latestRestWeight != null" >
+        #{latestRestWeight,jdbcType=DECIMAL},
+      </if>
+      <if test="latestRestCapacity != null" >
+        #{latestRestCapacity,jdbcType=DECIMAL},
+      </if>
+      <if test="latestInmPercent != null" >
+        #{latestInmPercent,jdbcType=INTEGER},
+      </if>
+      <if test="latestRestTime != null" >
+        #{latestRestTime,jdbcType=INTEGER},
+      </if>
+      <if test="timeAlarmStatus != null" >
+        #{timeAlarmStatus,jdbcType=INTEGER},
+      </if>
+      <if test="capacityAlarmStatus != null" >
+        #{capacityAlarmStatus,jdbcType=INTEGER},
+      </if>
+      <if test="speedAlarmStatus != null" >
+        #{speedAlarmStatus,jdbcType=INTEGER},
+      </if>
+      <if test="warningVolume != null" >
+        #{warningVolume,jdbcType=INTEGER},
+      </if>
+      <if test="usage != null" >
+        #{usage,jdbcType=VARCHAR},
+      </if>
+      <if test="frequency != null" >
+        #{frequency,jdbcType=VARCHAR},
+      </if>
+      <if test="orderBarcode != null" >
+        #{orderBarcode,jdbcType=VARCHAR},
+      </if>
+      <if test="patId != null" >
+        #{patId,jdbcType=VARCHAR},
+      </if>
+      <if test="patName != null" >
+        #{patName,jdbcType=VARCHAR},
+      </if>
+      <if test="patInhospNo != null" >
+        #{patInhospNo,jdbcType=VARCHAR},
+      </if>
+      <if test="patSex != null" >
+        #{patSex,jdbcType=CHAR},
+      </if>
+      <if test="patAge != null" >
+        #{patAge,jdbcType=INTEGER},
+      </if>
+      <if test="patBarcode != null" >
+        #{patBarcode,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="dutyNurseCode != null" >
+        #{dutyNurseCode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.test.model.InmPerBagInfo" >
+    update inm_perbag_info
+    <set >
+      <if test="infusionBagId != null" >
+        infusion_bag_id = #{infusionBagId,jdbcType=VARCHAR},
+      </if>
+      <if test="macAddress != null" >
+        mac_address = #{macAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="beginTime != null" >
+        begin_time = #{beginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null" >
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="actTotalCapacity != null" >
+        act_total_capacity = #{actTotalCapacity,jdbcType=DECIMAL},
+      </if>
+      <if test="actTotalWeight != null" >
+        act_total_weight = #{actTotalWeight,jdbcType=DECIMAL},
+      </if>
+      <if test="stdTotalCapacity != null" >
+        std_total_capacity = #{stdTotalCapacity,jdbcType=DECIMAL},
+      </if>
+      <if test="stdTotalWeight != null" >
+        std_total_weight = #{stdTotalWeight,jdbcType=DECIMAL},
+      </if>
+      <if test="infusionStatus != null" >
+        infusion_status = #{infusionStatus,jdbcType=CHAR},
+      </if>
+      <if test="deptCode != null" >
+        dept_code = #{deptCode,jdbcType=VARCHAR},
+      </if>
+      <if test="deptName != null" >
+        dept_name = #{deptName,jdbcType=VARCHAR},
+      </if>
+      <if test="orderNo != null" >
+        order_no = #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="orderCount != null" >
+        order_count = #{orderCount,jdbcType=INTEGER},
+      </if>
+      <if test="orderExecIndex != null" >
+        order_exec_index = #{orderExecIndex,jdbcType=INTEGER},
+      </if>
+      <if test="material != null" >
+        material = #{material,jdbcType=VARCHAR},
+      </if>
+      <if test="tare != null" >
+        tare = #{tare,jdbcType=DECIMAL},
+      </if>
+      <if test="netWeight != null" >
+        net_weight = #{netWeight,jdbcType=DECIMAL},
+      </if>
+      <if test="specCapacity != null" >
+        spec_capacity = #{specCapacity,jdbcType=DECIMAL},
+      </if>
+      <if test="takeawayTime != null" >
+        takeaway_time = #{takeawayTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="bedCode != null" >
+        bed_code = #{bedCode,jdbcType=VARCHAR},
+      </if>
+      <if test="latestSentTime != null" >
+        latest_sent_time = #{latestSentTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="latestDropSpeed != null" >
+        latest_drop_speed = #{latestDropSpeed,jdbcType=INTEGER},
+      </if>
+      <if test="latestRestWeight != null" >
+        latest_rest_weight = #{latestRestWeight,jdbcType=DECIMAL},
+      </if>
+      <if test="latestRestCapacity != null" >
+        latest_rest_capacity = #{latestRestCapacity,jdbcType=DECIMAL},
+      </if>
+      <if test="latestInmPercent != null" >
+        latest_inm_percent = #{latestInmPercent,jdbcType=INTEGER},
+      </if>
+      <if test="latestRestTime != null" >
+        latest_rest_time = #{latestRestTime,jdbcType=INTEGER},
+      </if>
+      <if test="timeAlarmStatus != null" >
+        time_alarm_status = #{timeAlarmStatus,jdbcType=INTEGER},
+      </if>
+      <if test="capacityAlarmStatus != null" >
+        capacity_alarm_status = #{capacityAlarmStatus,jdbcType=INTEGER},
+      </if>
+      <if test="speedAlarmStatus != null" >
+        speed_alarm_status = #{speedAlarmStatus,jdbcType=INTEGER},
+      </if>
+      <if test="warningVolume != null" >
+        warning_volume = #{warningVolume,jdbcType=INTEGER},
+      </if>
+      <if test="usage != null" >
+        usage = #{usage,jdbcType=VARCHAR},
+      </if>
+      <if test="frequency != null" >
+        frequency = #{frequency,jdbcType=VARCHAR},
+      </if>
+      <if test="orderBarcode != null" >
+        order_barcode = #{orderBarcode,jdbcType=VARCHAR},
+      </if>
+      <if test="patId != null" >
+        pat_id = #{patId,jdbcType=VARCHAR},
+      </if>
+      <if test="patName != null" >
+        pat_name = #{patName,jdbcType=VARCHAR},
+      </if>
+      <if test="patInhospNo != null" >
+        pat_inhosp_no = #{patInhospNo,jdbcType=VARCHAR},
+      </if>
+      <if test="patSex != null" >
+        pat_sex = #{patSex,jdbcType=CHAR},
+      </if>
+      <if test="patAge != null" >
+        pat_age = #{patAge,jdbcType=INTEGER},
+      </if>
+      <if test="patBarcode != null" >
+        pat_barcode = #{patBarcode,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="dutyNurseCode != null" >
+        duty_nurse_code = #{dutyNurseCode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where seq_id = #{seqId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.test.model.InmPerBagInfo" >
+    update inm_perbag_info
+    set infusion_bag_id = #{infusionBagId,jdbcType=VARCHAR},
+      mac_address = #{macAddress,jdbcType=VARCHAR},
+      begin_time = #{beginTime,jdbcType=TIMESTAMP},
+      end_time = #{endTime,jdbcType=TIMESTAMP},
+      act_total_capacity = #{actTotalCapacity,jdbcType=DECIMAL},
+      act_total_weight = #{actTotalWeight,jdbcType=DECIMAL},
+      std_total_capacity = #{stdTotalCapacity,jdbcType=DECIMAL},
+      std_total_weight = #{stdTotalWeight,jdbcType=DECIMAL},
+      infusion_status = #{infusionStatus,jdbcType=CHAR},
+      dept_code = #{deptCode,jdbcType=VARCHAR},
+      dept_name = #{deptName,jdbcType=VARCHAR},
+      order_no = #{orderNo,jdbcType=VARCHAR},
+      order_count = #{orderCount,jdbcType=INTEGER},
+      order_exec_index = #{orderExecIndex,jdbcType=INTEGER},
+      material = #{material,jdbcType=VARCHAR},
+      tare = #{tare,jdbcType=DECIMAL},
+      net_weight = #{netWeight,jdbcType=DECIMAL},
+      spec_capacity = #{specCapacity,jdbcType=DECIMAL},
+      takeaway_time = #{takeawayTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      bed_code = #{bedCode,jdbcType=VARCHAR},
+      latest_sent_time = #{latestSentTime,jdbcType=TIMESTAMP},
+      latest_drop_speed = #{latestDropSpeed,jdbcType=INTEGER},
+      latest_rest_weight = #{latestRestWeight,jdbcType=DECIMAL},
+      latest_rest_capacity = #{latestRestCapacity,jdbcType=DECIMAL},
+      latest_inm_percent = #{latestInmPercent,jdbcType=INTEGER},
+      latest_rest_time = #{latestRestTime,jdbcType=INTEGER},
+      time_alarm_status = #{timeAlarmStatus,jdbcType=INTEGER},
+      capacity_alarm_status = #{capacityAlarmStatus,jdbcType=INTEGER},
+      speed_alarm_status = #{speedAlarmStatus,jdbcType=INTEGER},
+      warning_volume = #{warningVolume,jdbcType=INTEGER},
+      usage = #{usage,jdbcType=VARCHAR},
+      frequency = #{frequency,jdbcType=VARCHAR},
+      order_barcode = #{orderBarcode,jdbcType=VARCHAR},
+      pat_id = #{patId,jdbcType=VARCHAR},
+      pat_name = #{patName,jdbcType=VARCHAR},
+      pat_inhosp_no = #{patInhospNo,jdbcType=VARCHAR},
+      pat_sex = #{patSex,jdbcType=CHAR},
+      pat_age = #{patAge,jdbcType=INTEGER},
+      pat_barcode = #{patBarcode,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      duty_nurse_code = #{dutyNurseCode,jdbcType=VARCHAR}
+    where seq_id = #{seqId,jdbcType=BIGINT}
+  </update>
+</mapper>
