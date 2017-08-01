@@ -1,4 +1,4 @@
-package com.test.service.impl;
+package com.test.service;
 
 import com.test.service.DemoService;
 
