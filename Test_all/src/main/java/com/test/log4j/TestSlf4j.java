@@ -10,11 +10,11 @@ import org.slf4j.LoggerFactory;
 public class TestSlf4j {
     public static void main(String[] args) {
 
-      /*  PropertyConfigurator.configure("log4j.properties");
+        PropertyConfigurator.configure("D:\\TestPro\\Test_all\\src\\main\\resources\\log4j.properties");
 
         Logger logger = Logger.getLogger(TestSlf4j.class);
 
-        logger.info("yes");*/
+        logger.info("yes");
 
         org.slf4j.Logger logger2 = LoggerFactory.getLogger(TestSlf4j.class);
 
@@ -23,6 +23,10 @@ public class TestSlf4j {
         logger2.debug("hello2");
 
         logger2.warn("hello3");
+
+        String a="hello";
+        String b="world";
+        logger2.info("test {} {}",a,b);
 
     }
 }

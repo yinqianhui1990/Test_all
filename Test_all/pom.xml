@@ -55,7 +55,29 @@
       <artifactId>druid</artifactId>
       <version>1.0.26</version>
     </dependency>
+<!-- quartz 测试-->
+    <dependency>
+      <groupId>org.opensymphony.quartz</groupId>
+      <artifactId>quartz-all</artifactId>
+      <version>1.6.1</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <version>3.2.1</version>
+    </dependency>
 
+    <!--测试爬虫-->
+    <dependency>
+      <groupId>us.codecraft</groupId>
+      <artifactId>webmagic-core</artifactId>
+      <version>0.4.3</version>
+    </dependency>
 
+    <dependency>
+      <groupId>us.codecraft</groupId>
+      <artifactId>webmagic-extension</artifactId>
+      <version>0.4.3</version>
+    </dependency>
   </dependencies>
 </project>

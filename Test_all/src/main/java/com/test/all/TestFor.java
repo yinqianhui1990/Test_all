@@ -20,21 +20,24 @@ public class TestFor {
                             if(i==5){
                                 //throw new Exception();
                                 // int a=1/0;
-                                String b="123";
+                              /*  String b="123";
                                int a= b.lastIndexOf("*");
-                                b.substring(a-5,a);
+                                b.substring(a-5,a);*/
+                                String a=null;
+                                System.out.println(a.lastIndexOf("*"));
+
                             }
                             System.out.println("number:" + i);
                         }catch (Exception e){
                             System.out.println("xunhuan==="+e.getMessage());
                             System.out.println("msg:"+e);
                             //尽量少用或者别用e.getMessage();
-                            //int a=1/0;
+                            int a=1/0;
                         }
                     }
                }catch (Exception e){
                     System.out.println("renwu==="+e.getMessage());
-                   // int a=1/0;
+                    //int a=1/0;
                     System.out.println(123);
                 }
             }

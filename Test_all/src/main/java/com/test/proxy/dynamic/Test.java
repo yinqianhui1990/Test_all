@@ -5,6 +5,7 @@ package com.test.proxy.dynamic;
  */
 public class Test {
     public static void main(String[] args) {
+        //代理类
         LogHandler logHandler=new LogHandler();
        // UserManager userManager=(UserManager)logHandler.newProxyInstance(new UserManagerImpl());
        /* UserManager userManager=(UserManager)logHandler.newProxyInstance(new VipManagerImpl());

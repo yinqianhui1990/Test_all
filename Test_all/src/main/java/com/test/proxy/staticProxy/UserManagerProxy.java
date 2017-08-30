@@ -3,6 +3,7 @@ package com.test.proxy.staticProxy;
 
 /**
  * Created by ThinkPad on 2017/2/27.
+ * 代理类
  */
 public class UserManagerProxy implements UserManager{
     //目标对象

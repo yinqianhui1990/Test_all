@@ -4,7 +4,7 @@ package com.test.thread;
  * Created by ThinkPad on 2016/11/7.
  */
 public class Count implements Runnable{
-
+//此变量会被使用它的线程所改变，会影响其他线程获取此变量，所以要做同步操作。
     public static  int count=0;
 
 
@@ -26,7 +26,7 @@ public class Count implements Runnable{
     }*/
 
     public static  void  main(String[] args){
-       /* Count count=new Count();
+     /*   Count count=new Count();
         Thread t1=new Thread(count,"test1");
         Thread t2=new Thread(count,"test2");
         t1.start();
