@@ -14,7 +14,7 @@ public class ListTest {
         list2.addAll(list1);
         list1.add(2);
         list1.set(0,999);
-        //list1.clear();
+        list1.clear();
         System.out.println(list1);
         System.out.println(list1.size());
         System.out.println(list2);
