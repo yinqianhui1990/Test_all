@@ -27,7 +27,7 @@ public class App
 
             SqlSession session = sqlSessionFactory.openSession();
             try {
-                //方案一直接写对应方法名
+                //方案一直接写对应方法名 我改了一下2018-07-26
                 List<User> list =  session.selectList("com.test.mapper.UserMapper.selectAllUser");
                 System.out.println(list);
 
