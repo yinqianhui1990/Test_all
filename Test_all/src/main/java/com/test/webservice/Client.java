@@ -1,16 +1,18 @@
 package com.test.webservice;
 
-import com.test.webservice.pojo.User;
+
+/*import com.test.webservice.pojo.User;
+import org.apache.cxf.jaxws.endpoint.dynamic.JaxWsDynamicClientFactory;*/
 
 /**
  * Created by ThinkPad on 2016/10/25.
  */
 public class Client {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
         //首先右键run as 运行com.hsy.server.webServiceApp类，然后再运行这段客户端代码
-       /* JaxWsProxyFactoryBean jwpfb = new JaxWsProxyFactoryBean();
+     /*   JaxWsProxyFactoryBean jwpfb = new JaxWsProxyFactoryBean();
         jwpfb.setServiceClass(HelloWorld.class);
         jwpfb.setAddress("http://localhost:8080/helloWorld");
         HelloWorld hw = (HelloWorld) jwpfb.create();
@@ -18,6 +20,14 @@ public class Client {
         user.setName("马克思");
         user.setDescription("怀念马克思");
         System.out.println(hw.sayHiToUser(user));*/
+
+     /*   JaxWsDynamicClientFactory clientFactory = JaxWsDynamicClientFactory.newInstance();
+        org.apache.cxf.endpoint.Client client = clientFactory.createClient("http://localhost:8080/helloWorld?wsdl");
+        User user = new User();
+        user.setName("马克思");
+        user.setDescription("怀念马克思");
+        Object[] result = client.invoke("sayHiToUser", user);
+        System.out.println(result[0]);*/
     }
 
     /*参数说明:

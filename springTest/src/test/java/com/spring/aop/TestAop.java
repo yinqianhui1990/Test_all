@@ -19,6 +19,6 @@ public class TestAop {
     @Test
     public void test(){
         System.out.println(userService.getUser("123"));
-        System.out.println(userService.saveUser("123"));
+        System.out.println(userService.saveUser("123","yinqianhui"));
     }
 }

@@ -11,7 +11,7 @@ public class UserDao {
     public User getUser(String id){
         return  new User();
     }
-    public int  saveUser(String id){
+    public int  saveUser(String id,String name){
         return  1;
     }
 

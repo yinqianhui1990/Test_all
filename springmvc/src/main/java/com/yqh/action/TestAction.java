@@ -21,6 +21,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
+
 public class TestAction {
 	//跳转页面
     @RequestMapping("/test")  
@@ -51,8 +52,8 @@ public class TestAction {
         return user;  
     } 
     
-    //字符串接收
-    @RequestMapping(value= "/requestParam" , method= RequestMethod.GET) 
+    //字符串接收post
+    @RequestMapping(value= "/requestParam" , method= RequestMethod.POST)
     @ResponseBody  
    // @RequestParam( "userName" ) @RequestParam( "passWord" )
     public User getForm(String userName, String passWord) {  
@@ -63,8 +64,20 @@ public class TestAction {
     	user.setUserName(userName);
     	user.setPassWord(passWord);
         return user ;
-    } 
-    
+    }
+    //字符串接收get
+    @RequestMapping(value= "/requestParamGet" , method= RequestMethod.GET)
+    @ResponseBody
+    // @RequestParam( "userName" ) @RequestParam( "passWord" )
+    public User getFormTest(String userName, String passWord) {
+        System.out.println("requestParam");
+        System.out.println(userName+"=="+passWord);
+        User user=new User();
+        user.setId(2);
+        user.setUserName(userName);
+        user.setPassWord(passWord);
+        return user ;
+    }
     //具体对象接受
     @RequestMapping(value = "/sendUser", method = RequestMethod.POST)   
     @ResponseBody  
@@ -120,7 +133,13 @@ public class TestAction {
         }
         return "upload over." ;
     }
-    
-    
-  
+
+    @RequestMapping(value="/testException")
+    public String  testException(){
+
+        //throw  new Exception("我困了");
+        int a=1/0;
+return "123";
+    }
+
 }

@@ -34,7 +34,7 @@ public class PushClient {
                 @Override
                 public void initChannel(SocketChannel ch) throws Exception {
                     ChannelPipeline pipeline= ch.pipeline();
-                    pipeline.addLast(new LineBasedFrameDecoder(1024));
+                    pipeline.addLast(new LineBasedFrameDecoder(1024*10));
                     pipeline.addLast("decoder", new StringDecoder(Charset.forName("utf-8")));
                     pipeline.addLast("encoder", new StringEncoder(Charset.forName("utf-8")));
                     pipeline .addLast(new PushClientHandler());
@@ -53,7 +53,7 @@ public class PushClient {
                 request.setToUserName("server");
                 request.setMsgType(Constant.AUTH_MSG);
                 request.setFromUserName(socketChannel.id().toString());
-                request.setBody("652");
+                request.setBody("5042");
                 request.setCreateTime(new Date());
                 socketChannel.writeAndFlush(JSON.toJSONString(request)+ Constant.LS);
 

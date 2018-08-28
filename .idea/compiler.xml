@@ -23,35 +23,85 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="activemq2" />
+        <module name="blueBridge" />
+        <module name="client_sw" />
         <module name="consumer" />
+        <module name="deploy-test" />
         <module name="generator" />
         <module name="kafka" />
+        <module name="logback-test" />
+        <module name="maven" />
+        <module name="mock" />
+        <module name="mongo-test" />
+        <module name="mutiDataSource" />
+        <module name="mybatis" />
         <module name="nettyTest" />
         <module name="provider" />
+        <module name="push-client" />
+        <module name="rest" />
+        <module name="restful" />
+        <module name="shiro" />
+        <module name="shiro-lesson1" />
+        <module name="shiroTest" />
+        <module name="smvc-interceptor" />
+        <module name="sp-security" />
+        <module name="sping-redis" />
+        <module name="spring-aop" />
+        <module name="springboot" />
         <module name="springmvc" />
         <module name="springTest" />
+        <module name="springTransaction" />
         <module name="StrutsTest" />
+        <module name="test" />
+        <module name="test-mongo" />
+        <module name="test-socket" />
         <module name="Test_all" />
         <module name="webservice" />
         <module name="wechat" />
+        <module name="yyy" />
+        <module name="zookeeper" />
+      </profile>
+      <profile default="false" name="Annotation profile for sbm" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="sbm" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="activeMq" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
       <module name="activemq2" target="1.5" />
+      <module name="blueBridge" target="1.7" />
+      <module name="client_sw" target="1.5" />
       <module name="consumer" target="1.5" />
-      <module name="FileUpLoad" target="1.5" />
+      <module name="deploy-test" target="1.7" />
       <module name="generator" target="1.5" />
       <module name="kafka" target="1.5" />
+      <module name="logback-test" target="1.5" />
+      <module name="maven" target="1.5" />
+      <module name="mock" target="1.5" />
+      <module name="mongo-test" target="1.7" />
+      <module name="mutiDataSource" target="1.5" />
+      <module name="mybatis" target="1.7" />
       <module name="nettyTest" target="1.5" />
       <module name="provider" target="1.5" />
+      <module name="push-client" target="1.5" />
+      <module name="restful" target="1.5" />
+      <module name="sbm" target="1.8" />
+      <module name="shiro-lesson1" target="1.5" />
+      <module name="shiroTest" target="1.5" />
+      <module name="smvc-interceptor" target="1.5" />
+      <module name="sp-security" target="1.7" />
+      <module name="sping-redis" target="1.5" />
+      <module name="springboot" target="1.6" />
       <module name="springmvc" target="1.5" />
       <module name="springTest" target="1.5" />
-      <module name="struts2" target="1.5" />
-      <module name="StrutsTest" target="1.5" />
+      <module name="springTransaction" target="1.5" />
+      <module name="test-mongo" target="1.5" />
+      <module name="test-socket" target="1.5" />
       <module name="Test_all" target="1.5" />
-      <module name="webservice" target="1.5" />
-      <module name="wechat" target="1.5" />
+      <module name="TestPro" target="1.5" />
+      <module name="zookeeper" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

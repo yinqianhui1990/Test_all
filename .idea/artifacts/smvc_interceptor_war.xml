@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="smvc-interceptor:war">
+    <output-path>$PROJECT_DIR$/smvc-interceptor/target</output-path>
+    <root id="archive" name="smvc-interceptor.war">
+      <element id="artifact" artifact-name="smvc-interceptor:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,15 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/Test_all" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/mobile/test/ArrayOfString.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/mobile/test/GetDatabaseInfo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/mobile/test/GetDatabaseInfoResponse.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/mobile/test/GetMobileCodeInfo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/mobile/test/GetMobileCodeInfoResponse.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/mobile/test/MobileCodeWS.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/mobile/test/MobileCodeWSSoap.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/mobile/test/ObjectFactory.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/mobile/test/TestClient.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/mobile/test/package-info.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/test/proxy/dynamic2/FlightManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/test/proxy/dynamic2/FlightManagerImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/test/proxy/dynamic2/LogHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test_all/src/main/java/com/test/proxy/dynamic2/Test.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/activemq2/src/main/java/com/test/log/TestSlf4j.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/activemq2/src/main/resources/log4j.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blueBridge" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client_sw" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/deploy-test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/generator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kafka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logback-test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/maven" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mock" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mongo-test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mutiDataSource" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/nettyTest" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/push-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/restful" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/restful/src/main/webapp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/restful/src/main/webapp/assets" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/sbm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shiro-lesson1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/smvc-interceptor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/socket-test/src/com/test/socket/ReadThread.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/socket-test/src/com/test/socket/Server.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/socket-test/src/com/test/socket/client.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sp-security" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sping-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springTest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springTransaction" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot/springboot.docx" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/springboot/src/main/webapp/js/jquery-3.1.1.min.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/springmvc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc/src/main/webapp/fullScreen.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/springmvc/src/main/webapp/技术框架.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/src/main/resources/conf.properties" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/zookeeper" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

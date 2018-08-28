@@ -22,7 +22,6 @@ public final class DBUtils {
     static {
         try {
             Properties prop = new Properties();
-
             InputStream in =DBUtils.class.getClassLoader().getResourceAsStream("jdbc.properties");
             prop.load(in);
             url=prop.getProperty("jdbc.url");
@@ -37,7 +36,7 @@ public final class DBUtils {
         }
     }
 
-    private DBUtils() {
+    public DBUtils() {
 
     }
 
@@ -56,6 +55,10 @@ public final class DBUtils {
             }
         }
         return conn;
+    }
+
+    public void getTest(){
+        System.out.println("test");
     }
 
     /**
@@ -94,7 +97,7 @@ public final class DBUtils {
     }
 
 
-    public  static  void  main(String []args)throws Exception {
+   /* public  static  void  main(String []args)throws Exception {
         //没有使用线程池的情况会报错 Data source rejected establishment of connection,  message from server: "Too many connections
         //所以在有大并发的情况下需要使用线程池
         for (int i = 0; i < 3000; i++) {
@@ -111,10 +114,12 @@ public final class DBUtils {
                         closeResources(conn, preparedStatement, rs);
                     } catch (Exception e) {
                         e.printStackTrace();
+                    }finally {
+
                     }
                 }
             }).start();
         }
-    }
+    }*/
 
 }

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="test-mongo:war">
+    <output-path>$PROJECT_DIR$/test-mongo/target</output-path>
+    <root id="archive" name="test-mongo-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="test-mongo:war exploded" />
+    </root>
+  </artifact>
+</component>

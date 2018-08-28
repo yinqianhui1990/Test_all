@@ -45,7 +45,8 @@ public class AppTest
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-            User user = userMapper.selectByPrimaryKey(Long.parseLong("76"));
+           // User user = userMapper.selectByPrimaryKey(Long.parseLong("4"));
+            User user =userMapper.selectByCode("000283","5042");
             System.out.println("name: " + user.getName() + "|age: "
                     + user.getCode());
         } finally {

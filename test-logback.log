@@ -1,0 +1,4 @@
+2017-08-29 09:37:08 DEBUG [main] com.test.logback.App.test [21]- dubug信息：123456
+2017-08-29 09:37:08 INFO  [main] com.test.logback.App.test [22]- info: 成功了
+2017-08-29 09:37:08 WARN  [main] com.test.logback.App.test [23]- WARN: test
+2017-08-29 09:37:08 ERROR [main] com.test.logback.App.test [24]- error: 错误

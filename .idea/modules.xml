@@ -6,14 +6,39 @@
       <module fileurl="file://$PROJECT_DIR$/TestPro.iml" filepath="$PROJECT_DIR$/TestPro.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test_all/Test_all.iml" filepath="$PROJECT_DIR$/Test_all/Test_all.iml" />
       <module fileurl="file://$PROJECT_DIR$/activemq2/activemq2.iml" filepath="$PROJECT_DIR$/activemq2/activemq2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blueBridge/blueBridge.iml" filepath="$PROJECT_DIR$/blueBridge/blueBridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client_sw/client_sw.iml" filepath="$PROJECT_DIR$/client_sw/client_sw.iml" />
       <module fileurl="file://$PROJECT_DIR$/consumer/consumer.iml" filepath="$PROJECT_DIR$/consumer/consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/deploy-test/deploy-test.iml" filepath="$PROJECT_DIR$/deploy-test/deploy-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/factoryTest/factoryTest.iml" filepath="$PROJECT_DIR$/factoryTest/factoryTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/generator/generator.iml" filepath="$PROJECT_DIR$/generator/generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/kafka/kafka.iml" filepath="$PROJECT_DIR$/kafka/kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logback-test/logback-test.iml" filepath="$PROJECT_DIR$/logback-test/logback-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/maven.iml" filepath="$PROJECT_DIR$/maven/maven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mock/mock.iml" filepath="$PROJECT_DIR$/mock/mock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mongo-test/mongo-test.iml" filepath="$PROJECT_DIR$/mongo-test/mongo-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mutiDataSource/mutiDataSource.iml" filepath="$PROJECT_DIR$/mutiDataSource/mutiDataSource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/nettyTest/nettyTest.iml" filepath="$PROJECT_DIR$/nettyTest/nettyTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/provider/provider.iml" filepath="$PROJECT_DIR$/provider/provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/push-client/push-client.iml" filepath="$PROJECT_DIR$/push-client/push-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restful/restful.iml" filepath="$PROJECT_DIR$/restful/restful.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbm/sbm.iml" filepath="$PROJECT_DIR$/sbm/sbm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shiro-lesson1/shiro-lesson1.iml" filepath="$PROJECT_DIR$/shiro-lesson1/shiro-lesson1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shiroTest/shiroTest.iml" filepath="$PROJECT_DIR$/shiroTest/shiroTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/singleton/singleton.iml" filepath="$PROJECT_DIR$/singleton/singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smvc-interceptor/smvc-interceptor.iml" filepath="$PROJECT_DIR$/smvc-interceptor/smvc-interceptor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/socket-test/socket-test.iml" filepath="$PROJECT_DIR$/socket-test/socket-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sp-security/sp-security.iml" filepath="$PROJECT_DIR$/sp-security/sp-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sping-redis/sping-redis.iml" filepath="$PROJECT_DIR$/sping-redis/sping-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springTest/springTest.iml" filepath="$PROJECT_DIR$/springTest/springTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springTransaction/springTransaction.iml" filepath="$PROJECT_DIR$/springTransaction/springTransaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/springmvc/springmvc.iml" filepath="$PROJECT_DIR$/springmvc/springmvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test-socket.iml" filepath="$PROJECT_DIR$/test/test-socket.iml" />
       <module fileurl="file://$PROJECT_DIR$/webservice_client/webservice_client.iml" filepath="$PROJECT_DIR$/webservice_client/webservice_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ws-test/ws-test.iml" filepath="$PROJECT_DIR$/ws-test/ws-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zookeeper/zookeeper.iml" filepath="$PROJECT_DIR$/zookeeper/zookeeper.iml" />
     </modules>
   </component>
 </project>

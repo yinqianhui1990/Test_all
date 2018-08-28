@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#testButton").click(function(){
+                testAjax();
+            })
+
+        })
+
+        function testAjax(){
+            $.ajax({
+                url:'http://10.2.13.174:8080/login/',
+                type:'POST', //GET
+                async:true,    //或false,是否异步
+                data:{
+                    name:'yang',passWord:25
+                },
+                timeout:5000,    //超时时间
+                dataType:'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+                beforeSend:function(xhr){
+                    console.log(xhr)
+                    console.log('发送前')
+                },
+                success:function(data,textStatus,jqXHR){
+                    console.log(data)
+                    console.log(textStatus)
+                    console.log(jqXHR)
+                },
+                error:function(xhr,textStatus){
+                    console.log('错误')
+                    console.log(xhr)
+                    console.log(textStatus)
+                },
+                complete:function(){
+                    console.log('结束')
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<button id="testButton">ajax</button><br>
+<a href="http://10.2.13.174:8080/say/yinqianhui是大哥">/say/{name}</a><br>
+<a href="http://10.2.13.174:8080/login/yinqianhui是大哥/123456">/login/{name}/{password}</a>
+</body>
+</html>

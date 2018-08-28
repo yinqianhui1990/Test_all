@@ -5,7 +5,7 @@ package com.lachesis.Utils;
  */
 public class ConnectInfo {
 
-    public static  String IP="10.2.13.26";//服务器IP地址
+    public static  String IP="localhost";//服务器IP地址
 
-    public static int PORT=9999;    //服务器端口
+    public static int PORT=9998;    //服务器端口
 }

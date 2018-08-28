@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.NumberMapper" >
+  <resultMap id="BaseResultMap" type="com.test.model.Number" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="num_1" property="num1" jdbcType="INTEGER" />
+    <result column="num_2" property="num2" jdbcType="INTEGER" />
+    <result column="num_3" property="num3" jdbcType="INTEGER" />
+    <result column="num_4" property="num4" jdbcType="INTEGER" />
+    <result column="num_5" property="num5" jdbcType="INTEGER" />
+    <result column="num_6" property="num6" jdbcType="INTEGER" />
+    <result column="num_7" property="num7" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, num_1, num_2, num_3, num_4, num_5, num_6, num_7
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from numbers
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from numbers
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.test.model.Number" >
+    insert into numbers (id, num_1, num_2, 
+      num_3, num_4, num_5, num_6, 
+      num_7)
+    values (#{id,jdbcType=INTEGER}, #{num1,jdbcType=INTEGER}, #{num2,jdbcType=INTEGER}, 
+      #{num3,jdbcType=INTEGER}, #{num4,jdbcType=INTEGER}, #{num5,jdbcType=INTEGER}, #{num6,jdbcType=INTEGER}, 
+      #{num7,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.test.model.Number" >
+    insert into numbers
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="num1 != null" >
+        num_1,
+      </if>
+      <if test="num2 != null" >
+        num_2,
+      </if>
+      <if test="num3 != null" >
+        num_3,
+      </if>
+      <if test="num4 != null" >
+        num_4,
+      </if>
+      <if test="num5 != null" >
+        num_5,
+      </if>
+      <if test="num6 != null" >
+        num_6,
+      </if>
+      <if test="num7 != null" >
+        num_7,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="num1 != null" >
+        #{num1,jdbcType=INTEGER},
+      </if>
+      <if test="num2 != null" >
+        #{num2,jdbcType=INTEGER},
+      </if>
+      <if test="num3 != null" >
+        #{num3,jdbcType=INTEGER},
+      </if>
+      <if test="num4 != null" >
+        #{num4,jdbcType=INTEGER},
+      </if>
+      <if test="num5 != null" >
+        #{num5,jdbcType=INTEGER},
+      </if>
+      <if test="num6 != null" >
+        #{num6,jdbcType=INTEGER},
+      </if>
+      <if test="num7 != null" >
+        #{num7,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.test.model.Number" >
+    update numbers
+    <set >
+      <if test="num1 != null" >
+        num_1 = #{num1,jdbcType=INTEGER},
+      </if>
+      <if test="num2 != null" >
+        num_2 = #{num2,jdbcType=INTEGER},
+      </if>
+      <if test="num3 != null" >
+        num_3 = #{num3,jdbcType=INTEGER},
+      </if>
+      <if test="num4 != null" >
+        num_4 = #{num4,jdbcType=INTEGER},
+      </if>
+      <if test="num5 != null" >
+        num_5 = #{num5,jdbcType=INTEGER},
+      </if>
+      <if test="num6 != null" >
+        num_6 = #{num6,jdbcType=INTEGER},
+      </if>
+      <if test="num7 != null" >
+        num_7 = #{num7,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.test.model.Number" >
+    update numbers
+    set num_1 = #{num1,jdbcType=INTEGER},
+      num_2 = #{num2,jdbcType=INTEGER},
+      num_3 = #{num3,jdbcType=INTEGER},
+      num_4 = #{num4,jdbcType=INTEGER},
+      num_5 = #{num5,jdbcType=INTEGER},
+      num_6 = #{num6,jdbcType=INTEGER},
+      num_7 = #{num7,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <!--当参数为一个时可以写成code = #{code},当参数大于一个时只能写成code = #{param1} and ward_code=#{ param2}...-->
+  <select id="selectByNum_1" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    *
+    from numbers
+    where num_1 = #{param1}  and num_2=#{param2} limit 1
+  </select>
+</mapper>

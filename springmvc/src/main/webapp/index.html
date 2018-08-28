@@ -41,11 +41,16 @@ function seString(){
 		}, "json");	
 	}
 
+/*
+ 对比两个前端的http请求数据，修改了一下ajax提交的数据格式，解决了：
 
+ 1 contentType : "application/x-www-form-urlencoded",
+ 也就是说：收到ajax请求，Spring MVC根据“数据类型指示”，按照json格式解析收到的请求。
+*/
 function test4(){
 	jQuery.ajax( {     
-        type : 'GET',     
-        contentType : 'application/json;charset=UTF-8',     
+        type : 'POST',
+            contentType : "application/x-www-form-urlencoded",
         url : 'requestParam.do',     
         dataType : 'json',   
         data:{userName:"yiner",passWord:"123456"},
@@ -56,6 +61,22 @@ function test4(){
           alert("error");     
         }     
       });    
+}
+
+function testYYY(){
+    jQuery.ajax( {
+        type : 'GET',
+        contentType : "text/plain",
+        url : 'requestParamGet.do',
+        dataType : 'json',
+        data:{userName:"yiner",passWord:"123456"},
+        success : function(data) {
+            alert(data);
+        },
+        error : function() {
+            alert("error");
+        }
+    });
 }
 
 
@@ -127,6 +148,8 @@ function testxxx() {
 <button onclick="sendUser()">sendUser</button>
 <button onclick="saveUser()">saveUser</button>
 <button onclick="testxxx()">testxxx</button>
+<button onclick="testYYY()">testYYY</button>
+
 <form action="sendUser2.do" method="post">
         <input type="text" name="userName">
         <input type="text" name="passWord">

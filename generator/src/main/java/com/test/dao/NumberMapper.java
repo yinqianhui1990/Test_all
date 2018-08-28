@@ -14,4 +14,7 @@ public interface NumberMapper {
     int updateByPrimaryKeySelective(Number record);
 
     int updateByPrimaryKey(Number record);
+
+    Number selectByNum_1(Integer num_1,Integer num_2);
+
 }

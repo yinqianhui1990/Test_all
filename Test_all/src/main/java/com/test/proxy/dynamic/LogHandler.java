@@ -31,7 +31,7 @@ public class LogHandler implements InvocationHandler {
         Object ret=null;
         try{
 			/*原对象方法调用前处理日志信息*/
-            System.out.println("satrt-->>");
+            System.out.println("satrt开始-->>");
 
             //调用目标方法
             ret=method.invoke(targetObject, args);

@@ -7,6 +7,7 @@ import com.lachesis.Utils.Message;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -40,7 +41,7 @@ public class PushClientHandler extends ChannelInboundHandlerAdapter {
             ctx.fireChannelRead(msg);
         }else {
            //处理收到的工作消息
-            System.out.println("正在处理："+msg);
+            System.out.println(new Date()+"正在处理："+msg);
         }
     }
 

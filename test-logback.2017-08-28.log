@@ -1,0 +1,64 @@
+14:54:36 日志信息：123456
+14:54:53 日志信息：123456
+14:58:35 日志信息：123456
+14:58:35 logback 成功了
+14:58:35 logback 成功了
+14:59:26 日志信息：123456
+14:59:26 logback 成功了
+14:59:26 logback 成功了
+2017-08-28 15:02:18 日志信息：123456
+2017-08-28 15:02:18 logback 成功了
+2017-08-28 15:02:18 logback 成功了
+2017-08-28 15:04:12 DEBUG [main] com.test.logback.TestLog.main - 日志信息：123456
+2017-08-28 15:04:12 INFO  [main] com.test.logback.TestLog.main - logback 成功了
+2017-08-28 15:04:12 ERROR [main] com.test.logback.TestLog.main - logback 成功了
+2017-08-28 15:07:16 DEBUG [main] com.test.logback.TestLog.main - 日志信息：123456
+2017-08-28 15:07:16 INFO  [main] com.test.logback.TestLog.main - logback 成功了
+2017-08-28 15:07:16 ERROR [main] com.test.logback.TestLog.main - logback 成功了
+2017-08-28 15:19:30 DEBUG [main] com.test.logback.TestLog.main - 日志信息：123456
+2017-08-28 15:19:30 INFO  [main] com.test.logback.TestLog.main - logback 成功了
+2017-08-28 15:19:30 ERROR [main] com.test.logback.TestLog.main - logback 成功了
+2017-08-28 15:20:39 DEBUG [main] com.test.logback.TestLog.main - dubug信息：123456
+2017-08-28 15:20:39 INFO  [main] com.test.logback.TestLog.main - info: 成功了
+2017-08-28 15:20:39 WARN  [main] com.test.logback.TestLog.main - WARN: test
+2017-08-28 15:20:39 ERROR [main] com.test.logback.TestLog.main - error: 错误
+2017-08-28 15:21:27 DEBUG [main] com.test.logback.App.main - dubug信息：123456
+2017-08-28 15:21:27 INFO  [main] com.test.logback.App.main - info: 成功了
+2017-08-28 15:21:27 WARN  [main] com.test.logback.App.main - WARN: test
+2017-08-28 15:21:27 ERROR [main] com.test.logback.App.main - error: 错误
+2017-08-28 15:22:11 DEBUG [main] com.test.logback.App.test - dubug信息：123456
+2017-08-28 15:22:11 INFO  [main] com.test.logback.App.test - info: 成功了
+2017-08-28 15:22:11 WARN  [main] com.test.logback.App.test - WARN: test
+2017-08-28 15:22:11 ERROR [main] com.test.logback.App.test - error: 错误
+2017-08-28 15:25:21 [DEBUG][com.test.logback.App][test][21]-> dubug信息：123456
+2017-08-28 15:25:21 [INFO][com.test.logback.App][test][22]-> info: 成功了
+2017-08-28 15:25:21 [WARN][com.test.logback.App][test][23]-> WARN: test
+2017-08-28 15:25:21 [ERROR][com.test.logback.App][test][24]-> error: 错误
+2017-08-28 15:28:45 DEBUG [main] com.test.logback.App.test [21]- dubug信息：123456
+2017-08-28 15:28:45 INFO  [main] com.test.logback.App.test [22]- info: 成功了
+2017-08-28 15:28:45 WARN  [main] com.test.logback.App.test [23]- WARN: test
+2017-08-28 15:28:45 ERROR [main] com.test.logback.App.test [24]- error: 错误
+2017-08-28 15:30:07 DEBUG [main] com.test.logback.App.test [21]- dubug信息：123456
+2017-08-28 15:30:07 INFO  [main] com.test.logback.App.test [22]- info: 成功了
+2017-08-28 15:30:07 WARN  [main] com.test.logback.App.test [23]- WARN: test
+2017-08-28 15:30:07 ERROR [main] com.test.logback.App.test [24]- error: 错误
+2017-08-28 15:30:28 DEBUG [main] com.test.logback.App.test [21]- dubug信息：123456
+2017-08-28 15:30:28 INFO  [main] com.test.logback.App.test [22]- info: 成功了
+2017-08-28 15:30:28 WARN  [main] com.test.logback.App.test [23]- WARN: test
+2017-08-28 15:30:28 ERROR [main] com.test.logback.App.test [24]- error: 错误
+2017-08-28 15:31:26 DEBUG [DEBUG][com.test.logback.App][test][21]-> dubug信息：123456
+2017-08-28 15:31:26 INFO  [INFO][com.test.logback.App][test][22]-> info: 成功了
+2017-08-28 15:31:26 WARN  [WARN][com.test.logback.App][test][23]-> WARN: test
+2017-08-28 15:31:26 ERROR [ERROR][com.test.logback.App][test][24]-> error: 错误
+2017-08-28 15:31:30 DEBUG [DEBUG][com.test.logback.App][test][21]-> dubug信息：123456
+2017-08-28 15:31:30 INFO  [INFO][com.test.logback.App][test][22]-> info: 成功了
+2017-08-28 15:31:30 WARN  [WARN][com.test.logback.App][test][23]-> WARN: test
+2017-08-28 15:31:30 ERROR [ERROR][com.test.logback.App][test][24]-> error: 错误
+2017-08-28 15:33:24 DEBUG [main] com.test.logback.App.test [21]- dubug信息：123456
+2017-08-28 15:33:24 INFO  [main] com.test.logback.App.test [22]- info: 成功了
+2017-08-28 15:33:24 WARN  [main] com.test.logback.App.test [23]- WARN: test
+2017-08-28 15:33:24 ERROR [main] com.test.logback.App.test [24]- error: 错误
+2017-08-28 15:46:21 DEBUG [main] com.test.logback.App.test [21]- dubug信息：123456
+2017-08-28 15:46:21 INFO  [main] com.test.logback.App.test [22]- info: 成功了
+2017-08-28 15:46:21 WARN  [main] com.test.logback.App.test [23]- WARN: test
+2017-08-28 15:46:21 ERROR [main] com.test.logback.App.test [24]- error: 错误

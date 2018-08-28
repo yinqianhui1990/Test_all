@@ -15,7 +15,7 @@ public class UserService {
     public User getUser(String id){
         return  userDao.getUser(id);
     }
-    public boolean  saveUser(String id){
-        return  userDao.saveUser(id)==1;
+    public boolean  saveUser(String id,String name){
+        return  userDao.saveUser(id,name)==1;
     }
 }

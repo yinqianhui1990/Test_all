@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+function test1(){
+    var name="123";
+    jQuery.ajax( {
+        type : 'GET',
+        contentType : 'application/json;charset=UTF-8',
+        url : 'test/user/'+name,
+        dataType : 'json',
+        success : function(data) {
+            alert(data);
+            console.log(data);
+        },
+        error : function() {
+            alert("error");
+        }
+    });
+}
+
+function test2(){
+    jQuery.ajax( {
+        type : 'GET',
+        contentType : 'application/json;charset=UTF-8',
+        url : 'test/users/',
+        dataType : 'json',
+        success : function(data) {
+            alert(data);
+            console.log(data);
+        },
+        error : function() {
+            alert("error");
+        }
+    });
+}
+function test3(){
+    jQuery.ajax( {
+        type : 'PUT',
+        contentType : 'application/json;charset=UTF-8',
+        url : 'test/user',
+        dataType : 'json',
+        data:{name:"yinzai"},
+        success : function(data) {
+            alert(data);
+            console.log(data);
+        },
+        error : function() {
+            alert("error");
+        }
+    });
+}
+
+function test4(){
+    jQuery.ajax( {
+        type : 'DELETE',
+        contentType : 'application/json;charset=UTF-8',
+        url : 'test/user',
+        dataType : 'json',
+        data:{name:"yinzai111"},
+        success : function(data) {
+            alert(data);
+            console.log(data);
+        },
+        error : function() {
+            alert("error");
+        }
+    });
+}
+
+function test5(){
+    jQuery.ajax( {
+        type : 'POST',
+        contentType : 'application/json;charset=UTF-8',
+        url : 'test/user',
+        dataType : 'json',
+        data:{name:"yinzaiadd"},
+        success : function(data) {
+            alert(data);
+            console.log(data);
+        },
+        error : function() {
+            alert("error");
+        }
+    });
+}
+</script>
+</head>
+<body>
+<h2>index</h2>
+<button onclick="test1()">getUser</button>
+<button onclick="test2()">getUserList</button>
+<button onclick="test3()">putUser</button>
+<button onclick="test4()">delUser</button>
+<button onclick="test5()">addUser</button>
+</form>
+</body>
+</html>

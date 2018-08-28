@@ -15,6 +15,13 @@ public class Client {
     Socket socket=null;
     Thread readThread=null;
     Thread heartBeat=null;
+    /**
+     * @Author: yinqianhui
+     * @Description: 连接服务器
+     * @param:
+     * @param
+     * @Date Created by 12:20 on 2017/8/15.
+     */
     public void  connectServer(){
         try {
             //10.2.10.179
@@ -56,6 +63,16 @@ public class Client {
         }
     }
 
+    /**
+     * @Author: yinqianhui
+     * @Description: 关闭资源
+     * @param:
+     * @param writer
+     * @param in
+     * @param socket
+     * @Date Created by 12:21 on 2017/8/15.
+     * 关闭资源
+     */
     public void closeResource(PrintWriter writer,BufferedReader in,Socket socket){
         try{
             if(null!=writer){

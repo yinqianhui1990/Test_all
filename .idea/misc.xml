@@ -4,9 +4,18 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/deploy-test" />
     <file type="web" url="file://$PROJECT_DIR$/FileUpLoad" />
+    <file type="web" url="file://$PROJECT_DIR$/rest" />
+    <file type="web" url="file://$PROJECT_DIR$/restful" />
+    <file type="web" url="file://$PROJECT_DIR$/restful" />
+    <file type="web" url="file://$PROJECT_DIR$/shiroTest" />
+    <file type="web" url="file://$PROJECT_DIR$/smvc-interceptor" />
+    <file type="web" url="file://$PROJECT_DIR$/sp-security" />
+    <file type="web" url="file://$PROJECT_DIR$/springboot" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc" />
     <file type="web" url="file://$PROJECT_DIR$/StrutsTest" />
+    <file type="web" url="file://$PROJECT_DIR$/test-mongo" />
     <file type="web" url="file://$PROJECT_DIR$/webservice" />
   </component>
   <component name="MavenProjectsManager">
@@ -21,7 +30,16 @@
         <option value="$PROJECT_DIR$/activemq2/pom.xml" />
         <option value="$PROJECT_DIR$/springTest/pom.xml" />
         <option value="$PROJECT_DIR$/nettyTest/pom.xml" />
+        <option value="$PROJECT_DIR$/yyy/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/restful/pom.xml" />
+        <option value="$PROJECT_DIR$/sbm/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/test-mongo/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -34,7 +52,8 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
+  <component name="WebServicesPlugin" addRequiredLibraries="true" />
 </project>
