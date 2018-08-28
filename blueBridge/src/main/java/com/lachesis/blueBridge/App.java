@@ -44,7 +44,7 @@ public class App
                 DataMapper dataMapper=session.getMapper(DataMapper.class);
                 List<DevData> list2=dataMapper.selectAllDevList();
                 System.out.println("启动数据生成任务");
-                ExecutorService executorService = Executors.newFixedThreadPool(50);
+                ExecutorService executorService = Executors.newFixedThreadPool(60);
                 Random rand =new Random(25);
                 for(DevData devData:list2) {
                     DataProducer producer = new DataProducer(queue);
