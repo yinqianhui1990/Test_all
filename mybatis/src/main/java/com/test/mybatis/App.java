@@ -2,6 +2,7 @@ package com.test.mybatis;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.test.mapper.UserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -39,8 +40,11 @@ public class App
                 //分页插件测试
                 Page page =PageHelper.startPage(1, 10, true);
                 List<User> list3=userMapper.selectAllUser();
+                PageInfo<User> pageInfo =new PageInfo<>(list3);
                 System.out.println("total:"+page.getTotal());
                 System.out.println("分页结果="+list3.size());
+                System.out.println(pageInfo.getTotal());
+                System.out.println(pageInfo.getPages());
 
             } finally {
                 session.close();

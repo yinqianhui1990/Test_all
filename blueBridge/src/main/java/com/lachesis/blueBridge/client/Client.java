@@ -13,6 +13,9 @@ public class Client {
     public Client() {
         try {
             this.socket = new Socket("localhost",50500);
+            System.out.println("======"+socket.getReceiveBufferSize());
+            socket.setReceiveBufferSize(32*1024);
+            System.out.println("======"+socket.getReceiveBufferSize());
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -87,7 +87,8 @@ public class EchoClient {
     }
     public static void main(String[] args) throws Exception{
         EchoClient client=new EchoClient();
-        client.connectServer("localhost", 9999,client);
+        //client.connectServer("localhost", 9999,client);
+        client.connectServer("10.2.13.219", 3033,client);
 
     }
 }
